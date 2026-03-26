@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-frontend
-=======
-frontend
->>>>>>> 89e20c0a97b7507a3229ea64dabb743a14d33afe
