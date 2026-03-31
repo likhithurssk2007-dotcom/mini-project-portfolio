@@ -22,12 +22,13 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
 
     - name: Install dependencies
+      if: ${{ hashFiles('backend/package.json') != '' }}
       run: npm install
       working-directory: ./backend
 
     - name: Run tests
+      if: ${{ hashFiles('backend/package.json') != '' }}
       run: npm test
       working-directory: ./backend
