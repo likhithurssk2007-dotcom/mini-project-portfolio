@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -22,29 +21,4 @@ document.getElementById("contactForm").addEventListener("submit", async (e) => {
   } catch (error) {
     document.getElementById("response").innerText = "Error connecting to server";
   }
-=======
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  };
-
-  try {
-    const response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.json();
-    document.getElementById("response").innerText = result.message;
-  } catch (error) {
-    document.getElementById("response").innerText = "Error connecting to server";
-  }
->>>>>>> 89e20c0a97b7507a3229ea64dabb743a14d33afe
 });
